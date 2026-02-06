@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laila 💗</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating hearts -->
+  <div class="hearts" aria-hidden="true"></div>
+
+  <!-- Music (browser policy: plays after first click) -->
+  <audio id="bgMusic" loop>
+    <source src="assets/voice.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">Laila<span>💗</span></div>
+
+    <div class="music-controls">
+      <button id="musicBtn" class="btn small">🔊 Play</button>
+      <input id="vol" class="vol" type="range" min="0" max="1" step="0.01" value="0.7" />
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- PAGE 1 -->
+    <section class="card page active" id="page1">
+      <div class="cute-badge">🧸</div>
+      <h1>Will you be mine, <span class="name">Laila</span> 🥺💘?</h1>
+      <p class="sub">
+        Life is an incredible journey, and I want to spend every single second of it with you.
+      </p>
+
+      <div class="row">
+        <button class="btn yes" id="yesBtn">YES ❤️</button>
+        <button class="btn no" id="noBtn">NO 😶</button>
+      </div>
+
+      <p class="tiny">Tip: “NO” button shayad bhaagta rahe 😭</p>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="card page" id="page2">
+      <div class="cute-badge">💞</div>
+      <h1>Happy Valentine’s Day, <span class="name">Laila</span> 💍</h1>
+      <p class="sub">
+        Every second with you is a celebration. You are the spark that makes my world so much brighter!
+      </p>
+
+      <button class="btn primary" data-next="page3">SEE MY GIFTS →</button>
+      <button class="btn ghost" data-back="page1">← Back</button>
+    </section>
+
+    <!-- PAGE 3 (Quiz) -->
+    <section class="card page" id="page3">
+      <div class="cute-badge">📝</div>
+      <h1>Quiz for you 😚</h1>
+      <p class="sub">Who is the absolute “Boss” in this relationship? 😌</p>
+
+      <div class="quiz">
+        <button class="quizOpt correct">Obviously, You 😍</button>
+        <button class="quizOpt">Me 😅</button>
+        <button class="quizOpt">My Mom 😭</button>
+      </div>
+
+      <div id="quizResult" class="result hidden">✅ Correct! Because you’re the Boss, Laila 😌💗</div>
+
+      <div class="row">
+        <button class="btn primary" data-next="page4">Next →</button>
+        <button class="btn ghost" data-back="page2">← Back</button>
+      </div>
+    </section>
+
+    <!-- PAGE 4 (Letter) -->
+    <section class="card page" id="page4">
+      <div class="cute-badge">💌</div>
+      <h1>A Letter For You 🥺</h1>
+
+      <div class="letter">
+        <p><b>My Laila,</b></p>
+        <p>
+          Thank you for being my person. I want to hold your hand through every season of life.
+          You are my peace, my home, and my favorite feeling.
+        </p>
+        <p>
+          If I ever irritate you, I’m sorry — but please don’t go far 😭.
+          No one can replace you in my heart.
+        </p>
+        <p>
+          <b>Forever yours,</b><br/>
+          ❤️
+        </p>
+      </div>
+
+      <div class="row">
+        <button class="btn primary" data-next="page5">Memories →</button>
+        <button class="btn ghost" data-back="page3">← Back</button>
+      </div>
+    </section>
+
+    <!-- PAGE 5 (Memories) -->
+    <section class="card page" id="page5">
+      <div class="cute-badge">📸</div>
+      <h1>You are my forever 🧿❤️</h1>
+      <p class="sub">No matter where life takes us, my heart will always choose you, <span class="name">Laila</span>.</p>
+
+      <div class="gallery">
+        <figure class="ph">
+          <img src="assets/Memory 1.jpeg" alt="Memory 1" />
+          <figcaption>Memory #1</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="assets/Memory 2.jpeg" alt="Memory 2" />
+          <figcaption>Memory #2</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="assets/Memory 3.jpeg" alt="Memory 3" />
+          <figcaption>Memory #3</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="assets/Memory 4.jpeg" alt="Memory 4" />
+          <figcaption>Memory #4</figcaption>
+        </figure>
+      </div>
+
+      <div class="row">
+        <button class="btn primary" id="confettiBtn">Celebrate 🎉</button>
+        <button class="btn ghost" data-back="page4">← Back</button>
+      </div>
+
+      <p class="tiny">Photos nahi dikh rahi? Check karo file names assets/img1.jpg… img4.jpg same hone chahiye.</p>
+    </section>
+
+  </main>
+
+  <!-- Confetti layer -->
+  <canvas id="confetti"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
